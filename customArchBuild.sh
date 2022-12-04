@@ -15,8 +15,6 @@ mount --mkdir /dev/sd1 /mnt/boot
 swapon /dev/sda3
 pacstrap -K /mnt linux-zen linux-zen-headers linux-firmware networkmanager grub wpa_supplicant base base-devel vim sof-firmware man-pages
 genfstab -U /mnt >> /mnt/etc/fstab
-echo "----------------- type exit -------------------"
-arch-chroot /mnt
 echo "uncoment your localization" 
 sleep 5s
 cd /mnt
@@ -47,4 +45,6 @@ echo "The computer will restart in 10s"
 echo "You will want to use systemctl start networkmanager followed by systemctl enable networkmanager to have ethernet conexion"
 echo "as with wpa_supplicant to have wifi connection"
 sleep 10s
+echo "------------------------- type exit -----------------------------"
+arch-chroot /mnt
 reboot
