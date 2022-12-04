@@ -24,4 +24,5 @@ genfstab -U /mnt >> /mnt/etc/fstab
 echo
 echo "Now execute chrootScript"
 echo
+cp /customArchBuild/chrootScript.sh /mnt/customArchBuild/
 arch-chroot /mnt
