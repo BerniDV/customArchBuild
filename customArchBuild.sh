@@ -20,6 +20,7 @@ echo "--------------  uncoment your localization  -----------------"
 echo \n
 sleep 5s
 cd /mnt
+sudo su
 vim /etc/locale.gen
 locale-gen
 cat LANG=en_US.UTF-8 > /etc/locale.conf
@@ -35,9 +36,7 @@ usermod -aG wheel berni
 groups berni
 pacman -S sudo
 echo "uncoment group wheel can be root"
-vim /etc/sudoers
-grub-install /dev/sda
-grub-mkconfig -o /boot/grub/grub.cfg
+sudo vim /etc/sudoers
 echo "create your own dns to LAN -> IP  NAMEHOST"
 sleep 3
 vim /etc/hosts
@@ -49,4 +48,6 @@ echo "as with wpa_supplicant to have wifi connection"
 sleep 10s
 echo "------------------------- type exit -----------------------------"
 arch-chroot /mnt
+sudo grub-install /dev/sda
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 reboot
