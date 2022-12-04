@@ -40,7 +40,6 @@ sleep 3
 vim /etc/hosts
 pacman -S neofetch
 neofetch
-exit
 echo "The computer will restart in 10s"
 echo "You will want to use systemctl start networkmanager followed by systemctl enable networkmanager to have ethernet conexion"
 echo "as with wpa_supplicant to have wifi connection"
