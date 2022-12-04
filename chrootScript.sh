@@ -9,7 +9,7 @@ vim /etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 echo KEYMAP=es > /etc/vconsole.conf
-echo BD.OS > /etc/hostname
+echo BD0S > /etc/hostname
 echo \n
 echo "--------------------- set root password --------------------"
 echo \n
