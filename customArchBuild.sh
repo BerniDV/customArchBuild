@@ -15,9 +15,11 @@ mount --mkdir /dev/sd1 /mnt/boot
 swapon /dev/sda3
 pacstrap -K /mnt linux-zen linux-zen-headers linux-firmware networkmanager grub wpa_supplicant base base-devel vim sof-firmware man-pages
 genfstab -U /mnt >> /mnt/etc/fstab
+echo "----------------- type exit -------------------"
 arch-chroot /mnt
 echo "uncoment your localization" 
 sleep 5s
+cd /mnt
 vim /etc/locale.gen
 locale-gen
 cat LANG=en_US.UTF-8 > /etc/locale.conf
