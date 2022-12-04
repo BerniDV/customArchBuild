@@ -15,7 +15,9 @@ mount --mkdir /dev/sd1 /mnt/boot
 swapon /dev/sda3
 pacstrap -K /mnt linux-zen linux-zen-headers linux-firmware networkmanager grub wpa_supplicant base base-devel vim sof-firmware man-pages
 genfstab -U /mnt >> /mnt/etc/fstab
-echo "uncoment your localization" 
+echo \n
+echo "--------------  uncoment your localization  -----------------" 
+echo \n
 sleep 5s
 cd /mnt
 vim /etc/locale.gen
@@ -23,10 +25,11 @@ locale-gen
 cat LANG=en_US.UTF-8 > /etc/locale.conf
 cat KEYMAP=es > /etc/vconsole.conf
 cat BD.OS > /etc/hostname
-echo "set root password"
+echo "--------------------- set root password --------------------"
 sleep 3s
 passwd
 useradd -m berni
+echo "-------------- set user password --------------------"
 passwd berni
 usermod -aG wheel berni
 groups berni
