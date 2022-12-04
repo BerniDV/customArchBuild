@@ -7,9 +7,9 @@ echo \n
 sleep 5s
 vim /etc/locale.gen
 locale-gen
-cat LANG=en_US.UTF-8 > /etc/locale.conf
-cat KEYMAP=es > /etc/vconsole.conf
-cat BD.OS > /etc/hostname
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+echo KEYMAP=es > /etc/vconsole.conf
+echo BD.OS > /etc/hostname
 echo \n
 echo "--------------------- set root password --------------------"
 echo \n
@@ -38,8 +38,8 @@ vim /etc/hosts
 pacman -S neofetch
 neofetch
 
-echo "The computer will restart in 10s"
 echo "You will want to use systemctl start networkmanager followed by systemctl enable networkmanager to have ethernet conexion"
 echo "as with wpa_supplicant to have wifi connection"
-sleep 10s
-reboot
+echo "---------------------------------------------------"
+echo "When you are ready type exit to restart the system"
+echo "---------------------------------------------------"
