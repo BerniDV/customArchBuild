@@ -5,8 +5,6 @@ echo \n
 echo "--------------  uncoment your localization  -----------------" 
 echo \n
 sleep 5s
-cd /mnt
-sudo su
 vim /etc/locale.gen
 locale-gen
 cat LANG=en_US.UTF-8 > /etc/locale.conf
