@@ -1,8 +1,5 @@
-sudo su
 systemctl start NetworkManager
 systemctl enable NetworkManager
-systemctlc start wpa_supplicant
-systemctl enable wpa_supplicant
 ping -c 4 google.com
 mkdir repos
 cd repos
@@ -13,7 +10,6 @@ pacman -S wget
 chgrp wheel yay/
 chmod g+x yay/
 cd yay
-su berni
 echo
 echo "If there is any build error download Go v.17, with:"
 echo

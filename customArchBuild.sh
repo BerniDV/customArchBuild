@@ -19,7 +19,7 @@ mkswap /dev/sda3
 mount /dev/sda2 /mnt
 mount --mkdir /dev/sd1 /mnt/boot
 swapon /dev/sda3
-pacstrap -K /mnt linux-zen linux-zen-headers linux-firmware networkmanager grub wpa_supplicant base base-devel vim sof-firmware man-pages
+pacstrap -K /mnt linux-zen linux-zen-headers linux-firmware networkmanager grub base base-devel vim sof-firmware man-pages
 genfstab -U /mnt >> /mnt/etc/fstab
 echo
 echo "Now execute chrootScript"
@@ -27,6 +27,6 @@ echo
 mkdir /mnt/customArchBuild
 cp customArchBuild/chrootScript.sh /mnt/customArchBuild/
 cp customArchBuild/UserScript.sh /mnt/customArchBuild/
-cp customArchBuild/customizeXFCE4Script /mnt/customArchBuild/
+cp customArchBuild/customizeXFCE4Script.sh /mnt/customArchBuild/
 arch-chroot /mnt
 reboot

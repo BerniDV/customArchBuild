@@ -1,7 +1,4 @@
 #We can test with lightdm
-
-sudo su
-
 pacman -S iwl
 
 timedatectl set-timezone Europe/Madrid
