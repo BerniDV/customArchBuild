@@ -26,5 +26,6 @@ echo "Now execute chrootScript"
 echo
 mkdir /mnt/customArchBuild
 cp customArchBuild/chrootScript.sh /mnt/customArchBuild/
+cp customArchBuild/UserScript.sh /mnt/customArchBuild/
 arch-chroot /mnt
 reboot
